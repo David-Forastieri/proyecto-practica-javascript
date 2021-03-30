@@ -1,0 +1,230 @@
+<!DOCTYPEs html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <title>Credisi</title>
+  
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <h1>CrediSi</h1>
+    </div>
+    <div class="row">
+      <h2>Creditos en el acto</h2>
+    </div>
+
+     <div class="row">
+     <div class="col-md-4">
+             <!-- Button trigger modal -->
+     <div class="row justify-content-end">
+      <button type="button" class="btn btn-orange" id="btn-simulador" data-toggle="modal" data-target="#exampleModal">
+          Simulador de creditos
+      </button>
+     </div>
+
+              <!-- Modal -->
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+       <div class="modal-content">
+          <div class="modal-header">
+            <span><h5 class="modal-title" id="exampleModalLabel">CrediSi</h5></span>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+        <div class="modal-body">
+
+            <!----COMIENZO DEL FORMULARIO---->
+        <form id="formulario">
+                  <!-----SECCION MONEDA----->
+          <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label col-sm-12 pt-0">Seleccione moneda</legend>
+                <div class="col-sm-10">
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input moneda" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="Pesos">
+                      <label class="form-check-label" for="inlineRadio1">Pesos</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input moneda" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="Dolares">
+                      <label class="form-check-label" for="inlineRadio2">Dolares</label>
+                  </div>
+                </div>
+            </div>
+            <span class="msjUndefined"></span>
+          </fieldset>
+
+                  <!-----SECCION DEL MONTO----->
+          <div class="form-group">
+            <label class="control-label">Monto a solicitar</label>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                  </div>
+                  <input type="text" class="form-control monto" name="numberMonto" id="numberMonto" placeholder="Introduzca monto a solicitar sin comas ó puntos">
+                  <div class="input-group-append">
+                    <span class="input-group-text">,00</span>
+                  </div>
+                </div>
+                <span id='msjValidacion'></span>
+
+              </div>
+          </div>
+
+                  <!-----CUOTAS----->
+          <div class="row">
+            <legend class="col-form-label col-sm-12 pt-0">Seleccione cantidad de cuotas</legend>
+              <div class="col-sm-12">
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input cuotas" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="6">
+                    <label class="form-check-label" for="inlineRadio1">6 cuotas</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input cuotas" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="12">
+                    <label class="form-check-label" for="inlineRadio2">12 cuotas</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input cuotas" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="24">
+                    <label class="form-check-label" for="inlineRadio2">24 cuotas</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input cuotas" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="36">
+                    <label class="form-check-label" for="inlineRadio2">36 cuotas</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input cuotas" type="radio" name="inlineRadioOptions2" id="inlineRadio5" value="48">
+                    <label class="form-check-label" for="inlineRadio2">48 cuotas</label>
+                </div>
+              </div>
+          </div>
+          <span class="msjUndefined2"></span>
+          
+          <div id="socalo">
+            <p id="mensaje"></p>
+          </div>
+        </form>
+                     <!------FIN DEL FORMULARIO--->
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-gray" onclick="location.reload()">Cerrar</button>
+          <button type="button" class="btn btn-orange" id="calcular">Simular credito</button>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+
+     <div class="col-md-5">
+           <!-- MODAL FORMULARIO -->
+    <div class="row justify-content-end">
+      <button type="button" class="btn btn-orange" id="btn-solicitud" data-toggle="modal" data-target="#exampleModal2">
+          Solicita tu credito
+      </button>
+    </div>
+
+              <!-- Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+       <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">CrediSi</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+        <div class="modal-body">
+<!----COMIENZO DE FORMULARIO DE INCRIPTION----->
+<form id="myForm">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputName">Nombre</label>
+      <input type="text" class="form-control" id="inputName">
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="inputLastName">Apellido</label>
+      <input type="text" class="form-control" id="inputLastName">
+    </div>
+      <span id="nombreError"></span>
+
+    <div class="form-group col-md-12">
+    <label for="inputDni">D.N.I</label>
+    <input type="number" class="form-control" id="inputDni" placeholder="Sin Puntos">
+  </div>
+  <span id="dniError"></span>
+
+
+  <div class="form-group col-md-12">
+    <label for="inputEmail">Email</label>
+    <input type="email" class="form-control" id="inputEmail" placeholder="email@">
+  </div>
+  <span id="emailError"></span>
+
+
+  <div class="form-group col-md-12">
+    <label for="inputAddress">Domicilio</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234, calle">
+  </div>
+  <span id="domicilioError"></span>
+
+<div class="form-row">
+  <div class="form-group col-md-6">
+    <label for="inputCity">Provincias</label>
+    <select class="custom-select form-control" id="inputCity">
+      <option selected></option>
+    </select>
+    </div>
+    <div class="form-group col-md-4">
+     <label for="inputCity2">Localidad</label>
+     <select class="custom-select form-control" id="inputCity2">
+      <option selected></option>
+    </select>
+    </div>
+
+    <div class="form-group col-md-2">
+      <label for="inputCp">C.P</label>
+      <input type="text" class="form-control" id="inputCp">
+    </div>
+    <div clas='col-md-12'>
+      <span id="domicilio2Error"></span>
+    </div>
+  </div>
+   </div>
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-gray" onclick="location.reload()">Cerrar</button>
+          <button type="submit" class="btn btn-orange" id="enviar">Enviar solicitud</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<!------------FIN DE CODIGO-------------------------->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+        <!-------SCRIPT DE BOOTSTRAP-------->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>

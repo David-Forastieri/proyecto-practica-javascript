@@ -1,0 +1,63 @@
+
+body{
+	background: url(https://imagenes.lainformacion.com/files/og_thumbnail/uploads/imagenes/2020/08/25/dar-dinero.png) no-repeat;
+	background-size: cover;	
+
+}
+
+h1{
+	color: #FEA200;
+	font-size: 80px;
+	margin-bottom: 40px;
+	margin-top: 20px;
+	margin-left: 20px;
+	text-shadow: 2px 4px #B1812C;
+	
+}
+
+h2{
+	color: #FEA200;
+	font-size: 40px;
+	margin-left: 20px;
+	text-shadow: 2px 3px #B1812C;
+
+
+}
+
+button{
+	margin-top: 200px;
+}
+
+.btn-orange{
+	color: #FFF;
+	background-color: #FEA200;
+	box-shadow: 2px 4px #B1812C;
+}
+.btn-gray{
+	color: #FFF;
+	background-color: #7B7F7E;
+	box-shadow: 3px 5px #12110F;
+
+}
+
+p{
+	font-size: 30px;
+	color: #FBA307;
+}
+input{
+	color: #FEA200;
+}
+.modal-header{
+	background-color: #FEA200;
+
+}
+.modal-title{
+	color: #FFF;
+}
+.form-control{
+	box-shadow:  2px 3px #B1812C;
+}
+.btn-close{
+	margin-top: 5px;
+
+}
